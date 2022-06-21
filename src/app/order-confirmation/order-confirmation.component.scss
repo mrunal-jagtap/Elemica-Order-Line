@@ -1,0 +1,181 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$app-primary: #27aae1;
+$app-accent: mat-palette($mat-pink, A200, A100, A400);
+
+$app-theme: mat-light-theme($app-primary, $app-accent);
+
+.button-wrapper {
+  justify-content: right;
+}
+
+.äpp-schedule-btn {
+  color: $app-primary;
+  letter-spacing: 2px;
+  font-weight: 600;
+  line-height: 30px;
+  padding: 3px 20px !important;
+  margin-right: 10px;
+}
+
+::ng-deep .mat-button-toggle-label-content {
+  line-height: 30px !important;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  padding: 3px 20px !important;
+}
+
+.mat-card-container .mat-card {
+  align-items: center;
+  display: flex;
+  min-height: unset !important;
+  padding: 10px;
+  margin: 10px;
+}
+
+.mat-card-container .mat-icon {
+  margin-right: 10px;
+}
+
+.left-content .mat-icon {
+  padding-top: 5px;
+  margin-left: 10px;
+}
+
+.panel-heading .row {
+  background: #e8f6fc;
+  padding: 10px 20px;
+}
+
+.left-content,
+.button-wrapper {
+  color: $app-primary;
+  align-items: center;
+  display: flex;
+  font-size: 18px;
+}
+
+.mat-button-toggle {
+  background-color: #fff;
+  color: #a29f9f;
+  line-height: 30px !important;
+}
+
+.mat-card-container .card-content {
+  color: #000000;
+}
+
+.mat-expansion-panel-header-title,
+::ng-deep.mat-expansion-indicator::after {
+  color: $app-primary;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card-title {
+  color: $app-primary;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.product-desc {
+  margin-bottom: 10px;
+}
+
+.panel-card-container {
+  background: #fff;
+}
+
+.br-divider {
+  border-right: 1px solid #dddfdf;
+}
+
+.mat-top-card-container .mat-card {
+  min-height: 200px;
+}
+
+.mat-expansion-panel {
+  background: #f4f5f6;
+  box-shadow: none;
+}
+
+.order-confirmation-wrapper {
+  background: #fff;
+  padding: 20px;
+}
+
+.pd-0 {
+  padding: 0;
+}
+
+label {
+  font-weight: 500;
+}
+
+.date-error {
+  margin-top: -12px;
+  color: red;
+}
+
+.btn-inline {
+  display: inline-block;
+}
+
+.mat-card-container {
+  margin: 10px 0px;
+}
+
+.mat-top-card-container {
+  padding: 10px;
+}
+
+@mixin mix-app-theme($app-theme) {
+  $primary: map-get($app-theme, primary);
+  $accent: map-get($app-theme, accent);
+
+  #mat-button-toggle-3.mat-button-toggle-checked,
+  .change-card {
+    color: $primary;
+    background: #e8f6fc;
+  }
+}
+
+#mat-button-toggle-1.mat-button-toggle-checked,
+.accept-card {
+  color: rgb(10, 91, 51);
+  background: rgb(195, 224, 209);
+}
+
+#mat-button-toggle-2.mat-button-toggle-checked,
+.reject-card {
+  color: rgb(195, 16, 12);
+  background: rgb(231, 220, 220);
+}
+
+// Include the mixin
+@include mix-app-theme($app-theme);
+
+.mat-form-field {
+  width: -webkit-fill-available;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  border-radius: 4px !important;
+  padding: 0 10px !important;
+  background: inherit;
+  border: 1px solid black;
+}
+
+::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-flex {
+  border: 1px solid red;
+}
+
+/* On screens that are 768px or less */
+@media screen and (max-width: 768px) {
+  .btn-inline {
+    display: block;
+  }
+}

@@ -1,0 +1,17 @@
+.footer{
+    margin-top:auto;   
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+  }
+  .btn-submit{
+    background: #27aae1;
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+  /* On screens that are 768px or less */
+@media screen and (max-width: 768px) {
+  .footer{
+    justify-content: center;
+  }
+}
